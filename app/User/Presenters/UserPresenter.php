@@ -15,7 +15,6 @@ class UserPresenter
         $resource->country = $user->country;
         $resource->lastName = $user->last_name;
         $resource->firstName = $user->first_name;
-        $resource->accessToken = $user->userSession->access_token;
 
         return $resource;
     }

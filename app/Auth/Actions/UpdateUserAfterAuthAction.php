@@ -9,8 +9,8 @@ class UpdateUserAfterAuthAction
 {
     public function execute(UserDTO $DTO, User $user): User
     {
-        $user->update(array_filter($DTO->toArray()));
-        $user->userSession()->updateOrCreate(['user_id' => $user->id], ['access_token' => $DTO->accessToken]);
+        $user->update($DTO->toArray());
+        $user->userSession()->update(['access_token' => $DTO->accessToken]);
 
         return $user;
     }

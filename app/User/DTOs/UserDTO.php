@@ -4,8 +4,6 @@ namespace App\User\DTOs;
 
 class UserDTO
 {
-    public ?int $id;
-
     public ?string $firstName;
 
     public ?string $lastName;
@@ -19,7 +17,6 @@ class UserDTO
     public function toArray(): array
     {
         return [
-            'id'           => $this->id,
             'first_name'   => $this->firstName,
             'last_name'    => $this->lastName,
             'country'      => $this->country,

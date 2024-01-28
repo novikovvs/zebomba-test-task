@@ -10,8 +10,9 @@ class RegisterUserAfterAuthAction
     public function execute(UserDTO $DTO): User
     {
         $user = new User();
-        $user->fill(array_filter($DTO->toArray()));
+        $user->fill($DTO->toArray());
         $user->save();
+        $user->userSession()->create($DTO->toArray());
 
         return $user;
     }

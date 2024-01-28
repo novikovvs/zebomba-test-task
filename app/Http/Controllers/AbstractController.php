@@ -8,6 +8,6 @@ abstract class AbstractController
 {
     public function success($mixed): JsonResponse
     {
-        return response()->json(['status' => 'success', 'result' => $mixed]);
+        return response()->json(['status' => 'success', 'result' => $mixed, 'errors' => null]);
     }
 }

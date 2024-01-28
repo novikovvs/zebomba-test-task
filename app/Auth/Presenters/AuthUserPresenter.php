@@ -20,7 +20,7 @@ class AuthUserPresenter
     {
         $resource = new AuthUserResource();
         $resource->userInfo = $this->presenter->present($user);
-        $resource->accessToken = $user->userSession()->first()->access_token;
+        $resource->accessToken = $user->userSession->access_token;
 
         return $resource;
     }
