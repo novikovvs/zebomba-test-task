@@ -14,7 +14,7 @@ class AuthOrRegisterAction
 
     public function __construct(
         CheckAccessSignAction $checkAccessSignAction,
-        AuthAction $authAction,
+        AuthAction $authAction
     ) {
         $this->checkAccessSignAction = $checkAccessSignAction;
         $this->authAction = $authAction;
