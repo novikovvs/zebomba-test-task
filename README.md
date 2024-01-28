@@ -16,4 +16,3 @@ docker compose exec app php artisan migrate
 
 Для корректной работы, в .env - APP_KEY нужно проставить правильный ключ
 
-*Итоговое время около 3-4х часов*
